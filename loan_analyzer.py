@@ -18,8 +18,8 @@ loan_costs = [500, 600, 200, 1000, 450]
 # @TODO: Use the `len` function to calculate the total number of loans in the list.
 total_number_of_loans = len(loan_costs)
 # Print the number of loans from the list
-print(f"Total number of loan: {total_number_of_loans}")
 # YOUR CODE HERE!
+print(f"Total number of loan: {total_number_of_loans}")
 
 # What is the total of all loans?
 # @TODO: Use the `sum` function to calculate the total of all loans in the list.
@@ -117,12 +117,12 @@ new_loan = {
 #    The function should return the `present_value` for the loan.
 # YOUR CODE HERE!
 def calc_present_value(future_value, remaining_months, annual_discount_rate):
-    present_value = future_value / (1 + annual_discount_rate/12)**remaining_months
+    present_value = future_value / (1 + annual_discount_rate/12) ** remaining_months
     return present_value
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
-# YOUR CODE HERE! (REVISIT.  NOT SURE IF I FOLLOWED DIRECTIONS CORRECTLY HERE)
+# YOUR CODE HERE!
 annual_discount_rate = .20
 present_value = calc_present_value(
     new_loan["future_value"],
@@ -174,11 +174,11 @@ loans = [
 inexpensive_loans = []
 
 # @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
-# YOUR CODE HERE! (BEGIN HERE) *CHECK THIS OVER!  DID I DO THIS RIGHT?*
+# YOUR CODE HERE!
 for item in loans:
-    loan_price = item["loan_price"]
+    loan_price = item["loan_price"]         #loops through each item (loan price) for each loan
     if loan_price <= 500:
-        inexpensive_loans.append(item)
+        inexpensive_loans.append(item)      #if loan price is equal to or greater than 500 then appends to empty list
 
 # @TODO: Print the `inexpensive_loans` list
 # YOUR CODE HERE!
